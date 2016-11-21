@@ -88,3 +88,20 @@ function isInt(x){
 function isPositiveInt(x){
 	return isInt(x) && parseInt(x)>0;
 }
+
+/**
+ * Given an id, its returned an object containing the data related to the employee
+ *
+ * @param      {number}  id      The identifier
+ * @return     {Object}  The employee.
+ */
+function getEmployee(id){
+	return 
+	{
+		id : employees.id[id],
+		name: employees.name[id],			
+		surname : employees.surname[id],
+		level : employees.level[id],
+		salary : employees.salary[id]
+	};
+}

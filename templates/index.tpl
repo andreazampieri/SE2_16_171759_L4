@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Employees</title>
@@ -12,13 +13,13 @@
 		<button>Delete</button>
 	</section>
 	<button>Show/Hide Insert Form</button>
-	<section style="display: block">
+	<section style="display: none">
 		<form>
-			ID: <input type="number" name="id" value ="1"><br>
-			Name: <input type="text" name="name"><br>
-			Surname: <input type="text" name="surname"><br>
-			Level: <input type="number" name="level"><br>
-			Salary: <input type="number" name="salary"><br>
+			ID: <input type="number" name="id" value="(:id:)"><br>
+			Name: <input type="text" name="name" value="(:name:)"><br>
+			Surname: <input type="text" name="surname" value="(:surname:)"><br>
+			Level: <input type="number" name="level" value="(:level:)"><br>
+			Salary: <input type="number" name="salary" value="(:salary:)"><br>
 			<button>Insert</button>
 		</form>
 	</section>
