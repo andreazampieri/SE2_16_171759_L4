@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Employees</title>
 	<meta charset="utf-8" />
-	<script src="scripts/script.js" type="text/javascript"></script>
+	<script src="scripts/script.js"></script>
 </head>
 <body>
 	<section>
+	<form>
 		<input type="number" name="">
 		<button>Search</button>
 		<button>Delete</button>
+	</form>
 	</section>
-	<button>Show/Hide Insert Form</button>
-	<section style="display: none">
-		<form>
+	<button onclick="toggleForm();">Show/Hide Insert Form</button>
+	<section id="input-form" style="display: (: display ~ none :)">
+		<form action="http://localhost:32123/insert" method="post">
 			ID: <input type="number" name="id" value="(:id:)"><br>
 			Name: <input type="text" name="name" value="(:name:)"><br>
 			Surname: <input type="text" name="surname" value="(:surname:)"><br>
 			Level: <input type="number" name="level" value="(:level:)"><br>
 			Salary: <input type="number" name="salary" value="(:salary:)"><br>
-			<button>Insert</button>
+			<input type="submit" value="Insert">
 		</form>
 	</section>
 </body>

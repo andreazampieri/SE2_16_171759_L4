@@ -1,4 +1,3 @@
-
 // object containing the data
 
 var employees = {
@@ -59,7 +58,7 @@ function insertEmployee(id,name,surname,level,salary){
  *
  * @return     {number}  The new id.
  */
-function getNewID(){
+var getNewID = function getNewID(){
 	var max = -1;
 	for(var i=0;i<employees.id.length;i++){
 		if(employees.id[i] > max){
@@ -96,7 +95,7 @@ function isPositiveInt(x){
  * @return     {Object}  The employee.
  */
 function getEmployee(id){
-	return 
+	var emp =
 	{
 		id : employees.id[id],
 		name: employees.name[id],			
@@ -104,4 +103,24 @@ function getEmployee(id){
 		level : employees.level[id],
 		salary : employees.salary[id]
 	};
+	return emp;
 }
+
+var removeEmployee = function(id){
+	var index = employees.id.indexOf(id);
+	if(index != -1){
+		employees.id.splice(index,1);
+		employees.name.splice(index,1);
+		employees.surname.splice(index,1);
+		employees.level.splice(index,1);
+		employees.salary.splice(index,1);
+	}
+}
+
+var addEmployee = function addEmployee(id,name,surname,level,salary){
+	insertEmployee(id,name,surname,level,salary);
+};
+
+exports.getNewID = getNewID;
+exports.addEmployee = addEmployee;
+exports.removeEmployee = removeEmployee;
