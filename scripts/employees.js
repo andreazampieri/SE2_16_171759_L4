@@ -14,8 +14,8 @@ var employees = {
  * @param      {number}      id      The identifier
  * @return     {boolean}  True if present, False otherwise.
  */
-function isPresent(id) {
-	return employees.id.indexOf(id)!= -1 ? true : false;
+var isPresent = function(id) {
+	return employees.id.indexOf(id) != -1 ? true : false;
 }
 
 /**
@@ -84,8 +84,12 @@ function isInt(x){
  * @param      			  x    the value to be processed
  * @return     {boolean}  True if x is a positive int, False otherwise.
  */
-function isPositiveInt(x){
+var isValidID = function(x){
 	return isInt(x) && parseInt(x)>0;
+}
+
+function getIndexFromID(id){
+	return employees.id.indexOf(id);
 }
 
 /**
@@ -94,14 +98,15 @@ function isPositiveInt(x){
  * @param      {number}  id      The identifier
  * @return     {Object}  The employee.
  */
-function getEmployee(id){
+var getEmployee = function(id){
+	var i = getIndexFromID(id);
 	var emp =
 	{
-		id : employees.id[id],
-		name: employees.name[id],			
-		surname : employees.surname[id],
-		level : employees.level[id],
-		salary : employees.salary[id]
+		id : employees.id[i],
+		name: employees.name[i],			
+		surname : employees.surname[i],
+		level : employees.level[i],
+		salary : employees.salary[i]
 	};
 	return emp;
 }
@@ -124,3 +129,6 @@ var addEmployee = function addEmployee(id,name,surname,level,salary){
 exports.getNewID = getNewID;
 exports.addEmployee = addEmployee;
 exports.removeEmployee = removeEmployee;
+exports.getEmployee = getEmployee;
+exports.isValidID = isValidID;
+exports.isPresent = isPresent;
