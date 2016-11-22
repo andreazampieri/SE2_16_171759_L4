@@ -8,9 +8,9 @@
 <body>
 	<section>
 	<form>
-		<input type="number" name="">
-		<button>Search</button>
-		<button>Delete</button>
+		<input type="number" name="idsearch">
+		<button onclick="searchEmp()">Search</button>
+		<button onclick="deleteEmp()">Delete</button>
 	</form>
 	</section>
 	<button onclick="toggleForm();">Show/Hide Insert Form</button>

@@ -2,6 +2,7 @@
 var express = require('express');
 var bind = require('bind');
 var employees = require('./employees.js');
+var bodyParser =  require('body-parser');
 
 
 // initialization server side
@@ -11,6 +12,8 @@ var port = 32123;
 
 app.set('port',(process.env.PORT || port));
 app.listen(port,address);
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 console.log('Server started on',address,':',port);
 
@@ -26,10 +29,7 @@ app.use('/insert',function(request,response){
 
 	employees.addEmployee(id,name,surname,salary);
 	bind.toFile('templates/index.tpl',
-		{
-			display : 'block',
-			id : 1
-		},
+		{},
 		function(data){
 			response.writeHead(200,{'Content-Type':'text/html'});
 			response.end(data);
@@ -38,7 +38,7 @@ app.use('/insert',function(request,response){
 
 
 app.use('/search',function(request,response){
-
+	
 });
 
 app.use('/delete',function(request,response){
