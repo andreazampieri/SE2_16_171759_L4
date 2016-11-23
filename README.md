@@ -1,6 +1,11 @@
 # SE2_16_171759_L4
 ### Andrea Zampieri 171759
 
+## Setup
+
+1. Clone the repository with `git clone https://github.com/andreazampieri/SE2_16_171759_L4.git`
+2. Install all the dependencies with `npm install`
+
 ## How to test
 
 1. Launch the server with `node scripts/index.js`
