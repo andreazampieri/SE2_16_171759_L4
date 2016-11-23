@@ -54,7 +54,7 @@ function insertEmployee(id,name,surname,level,salary){
 }
 
 /**
- * Gets the new id.
+ * Gets a new id not present in the data
  *
  * @return     {number}  The new id.
  */
@@ -88,6 +88,12 @@ var isValidID = function(x){
 	return isInt(x) && parseInt(x)>0;
 }
 
+/**
+ * Returns the index in the data that identifies the employee with a certain id
+ *
+ * @param      {number}  id      The identifier
+ * @return     {numbre}  The index from id.
+ */
 function getIndexFromID(id){
 	return employees.id.indexOf(id);
 }
@@ -111,6 +117,11 @@ var getEmployee = function(id){
 	return emp;
 }
 
+/**
+ * Remove the employee with a given id
+ *
+ * @param      {number}  id      The identifier
+ */
 var removeEmployee = function(id){
 	var index = employees.id.indexOf(id);
 	if(index != -1){
@@ -122,6 +133,16 @@ var removeEmployee = function(id){
 	}
 }
 
+/**
+ * Adds or updates an employee to the data
+ * The update is  done only when the id is already present
+ *
+ * @param      {number}  id       The identifier
+ * @param      {string}  name     The name
+ * @param      {string}  surname  The surname
+ * @param      {number}  level    The level
+ * @param      {number}  salary   The salary
+ */
 var addEmployee = function addEmployee(id,name,surname,level,salary){
 	if(!isPresent(id)){
 		insertEmployee(id,name,surname,level,salary);
@@ -130,6 +151,7 @@ var addEmployee = function addEmployee(id,name,surname,level,salary){
 	}
 };
 
+//exports of the methods of this module
 exports.getNewID = getNewID;
 exports.addEmployee = addEmployee;
 exports.removeEmployee = removeEmployee;
