@@ -15,5 +15,5 @@
 ## Initial state and what to NOT do
 
 * When the application is launched, there are **no** employees stored
-* The user only accesses the root pah [ http://localhost:32123/ ]:  */search*,  */insert* and  */delete* are used only by the js to send requests (sent when the button is pressed)
+* The user only accesses the root pah [ http://localhost:32123/ ]: */search*, */insert* and */delete* are used only by the js to send requests (sent when the button is pressed)
 * accessing */search*,  */insert* and  */delete* won't display the right page (in fact no HTML page, maybe some JSON data and usually a blank page)
