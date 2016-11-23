@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employees</title>
+	<meta charset="utf-8" />
+	<script src="scripts/script.js"></script>
+</head>
+<body>
+	<h2>Employee manager</h2>
+	<section>
+		<input type="number" id="idsearch">
+		<button onclick="searchEmp()">Search</button>
+		<button onclick="deleteEmp()">Delete</button>
+	</section>
+	<br>
+	<button onclick="toggleForm();">Show/Hide Insert Form</button>
+	<br>
+	<section id="input-form" style="display: none">
+		ID: <input type="number" id="id" name="id" value=""><br>
+		Name: <input type="text" id="name" name="name" value="" required><br>
+		Surname: <input type="text" id="surname" name="surname" value="" required><br>
+		Level: <input type="number" id="level" name="level" value="" required><br>
+		Salary: <input type="number" id="salary" name="salary" value="" required><br><br>
+		<button onclick="insertEmp()">Insert</button>
+	</section>
+</body>
+</html>

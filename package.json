@@ -1,0 +1,24 @@
+{
+  "name": "se2_16_171759_l4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreazampieri/SE2_16_171759_L4.git"
+  },
+  "author": "andreazampieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreazampieri/SE2_16_171759_L4/issues"
+  },
+  "homepage": "https://github.com/andreazampieri/SE2_16_171759_L4#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  }
+}
