@@ -42,11 +42,12 @@ function deleteEmp(){
 	var level = document.getElementById('level');
 	var salary = document.getElementById('salary');
 	var form = document.getElementById('input-form');
+	var param = document.getElementById('idsearch');
 
 	var xhr = new XMLHttpRequest();
 	xhr.open('post','http://localhost:32123/delete',true);
 	xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	xhr.send('id='+id.value);
+	xhr.send('id='+param.value);
 	xhr.onloadend = function(){
 		form.style.display = 'none';
 
