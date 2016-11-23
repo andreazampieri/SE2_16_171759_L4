@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/andreazampieri/SE2_16_171759_L4#readme",
   "dependencies": {
+    "bind": "^0.1.7",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "path": "^0.12.7"
   }
 }
