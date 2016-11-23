@@ -29,7 +29,7 @@ var isPresent = function(id) {
  * @param      {number}  salary   The salary
  */
 function updateEmployee(id,name,surname,level,salary){
-	var index = employee.id.indexOf(id);
+	var index = employees.id.indexOf(id);
 	employees.name[index] = name;
 	employees.surname[index] = surname;
 	employees.level[index] = level;
@@ -50,7 +50,7 @@ function insertEmployee(id,name,surname,level,salary){
 	employees.name.push(name);
 	employees.surname.push(surname);
 	employees.level.push(level);
-	employees.salary.push(level);
+	employees.salary.push(salary);
 }
 
 /**
@@ -59,7 +59,7 @@ function insertEmployee(id,name,surname,level,salary){
  * @return     {number}  The new id.
  */
 var getNewID = function getNewID(){
-	var max = -1;
+	var max = 0;
 	for(var i=0;i<employees.id.length;i++){
 		if(employees.id[i] > max){
 			max = employees.id[i];
@@ -123,7 +123,11 @@ var removeEmployee = function(id){
 }
 
 var addEmployee = function addEmployee(id,name,surname,level,salary){
-	insertEmployee(id,name,surname,level,salary);
+	if(!isPresent(id)){
+		insertEmployee(id,name,surname,level,salary);
+	}else{
+		updateEmployee(id,name,surname,level,salary);
+	}
 };
 
 exports.getNewID = getNewID;
